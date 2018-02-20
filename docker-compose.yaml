@@ -1,0 +1,10 @@
+version: '3'
+services:
+  alpine:
+    image: stenehall/alpine
+    hostname: alpine
+    ports:
+    - "2222:22"
+    - 60001-60005:60001-60005/udp
+    volumes:
+    - ./authorized_keys:/home/alpine/.ssh/authorized_keys
